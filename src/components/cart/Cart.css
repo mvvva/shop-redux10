@@ -1,0 +1,128 @@
+
+.cart-container {
+    padding: 16px;
+    background-color: #1f2937;
+    color: #ffffff;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .cart-header h1 {
+    font-size: 24px;
+  }
+  
+  .cart-actions {
+    display: flex;
+    gap: 8px;
+  }
+  
+  .cart-action-btn {
+    background-color: #374151;
+    border: none;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .cart-action-btn:hover {
+    background-color: #4b5563;
+  }
+  
+  .cart-items {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    background-color: #374151;
+    padding: 16px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    position: relative;
+  }
+  
+  .cart-item-image {
+    width: 100px;
+    height: auto;
+    margin-right: 16px;
+  }
+  
+  .cart-item-details {
+    flex: 1;
+  }
+  
+  .cart-item-name {
+    font-size: 18px;
+    margin-bottom: 4px;
+  }
+  
+  .cart-item-price {
+    font-size: 16px;
+    color: #d1d5db;
+    margin-bottom: 8px;
+  }
+  
+  .cart-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .quantity-btn {
+    background-color: #374151;
+    border: none;
+    color: #ffffff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .quantity-btn:disabled {
+    background-color: #4b5563;
+    cursor: not-allowed;
+  }
+  
+  .remove-item-btn {
+    background-color: #374151;
+    border: none;
+    color: #ffffff;
+    padding: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+  
+  .remove-item-btn:hover {
+    background-color: #4b5563;
+  }
+  
+  .empty-cart {
+    text-align: center;
+    color: #d1d5db;
+  }
+  
+  .close-cart-btn {
+    background-color: #1d4ed8;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .close-cart-btn:hover {
+    background-color: #2563eb;
+  }
+  
