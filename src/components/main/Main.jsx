@@ -52,7 +52,6 @@ function Main({ selectedBrand, selectedColor, sortBy }) {
     dispatch(addItem({ id: product.id, product }));
   };
 
-  // Helper function to get the quantity of a specific item
   const getItemQuantity = (id) => {
     const item = items.find(item => item.id === id);
     return item ? item.quantity : 0;
@@ -86,8 +85,11 @@ function Main({ selectedBrand, selectedColor, sortBy }) {
               ))}
             </div>
             <button 
-              className="mt-2 bg-blue-500 text-white p-2 rounded flex gap-2 items-center relative"
+              className={`mt-2 p-2 rounded flex gap-2 items-center relative ${
+                getItemQuantity(p.id) > 0 ? 'bg-gray-500 cursor-not-allowed' : 'bg-blue-500 text-white'
+              }`}
               onClick={() => handleAddToCart(p)}
+              disabled={getItemQuantity(p.id) > 0}
             >
               Add <FaShoppingCart className="text-white" size={18} />
               {getItemQuantity(p.id) > 0 && (
@@ -96,6 +98,7 @@ function Main({ selectedBrand, selectedColor, sortBy }) {
                 </span>
               )}
             </button>
+
           </li>
         ))}
       </ul>
